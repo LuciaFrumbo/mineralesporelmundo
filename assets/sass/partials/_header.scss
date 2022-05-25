@@ -1,0 +1,30 @@
+header {
+    background-color: $principal;
+}
+
+nav {
+    @include flex (column, center, center, 1em);
+}
+
+.header__logo {
+    display: flex;
+    
+}
+
+a {
+    text-decoration: none;
+    color: $secondary;
+    &:hover {
+        color: rgb(155, 155, 154);
+    }
+}
+
+.navbar {
+    @include flex(row, space-between, center, 5em);
+    list-style-type: none;
+}
+
+.navbar__down {
+    @include flex (row, flex-end, center, 1em);
+    margin-right: 3em;
+}

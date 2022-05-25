@@ -1,0 +1,75 @@
+/* Variables */
+/* Imports */
+/*Normalize*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*Globales*/
+body {
+  max-width: 100%; }
+
+/* HELPERS */
+header {
+  background-color: #000; }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em; }
+
+.header__logo {
+  display: flex; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+  a:hover {
+    color: #9b9b9a; }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5em;
+  list-style-type: none; }
+
+.navbar__down {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  margin-right: 3em; }
+
+#contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap; }
+
+.product__card {
+  border: solid 0.1em #000;
+  margin: 2em; }
+  .product__card__img {
+    max-height: 20em;
+    max-width: auto;
+    margin: 0.5em; }
+  .product__card__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    margin: 0.5em; }
+  .product__card__name {
+    margin: 0.5em;
+    text-align: center; }
