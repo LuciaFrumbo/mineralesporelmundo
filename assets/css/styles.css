@@ -73,3 +73,6 @@ a {
   .product__card__name {
     margin: 0.5em;
     text-align: center; }
+
+#add__carrito {
+  font-size: 2rem; }

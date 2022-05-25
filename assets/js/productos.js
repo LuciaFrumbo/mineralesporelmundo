@@ -149,26 +149,3 @@ let nuevoArray = productos.filter((elemento) => elemento.precio < 10);
 console.log("Array con precio menor a 10");
 console.table(nuevoArray); */
 
-//IMPRIMIR ELEMENTOS EN HTML
-
-function imprimirElementosEnHTML(productos) {
-    let contenedor = document.getElementById("contenedor");
-
-    for (const producto of productos) {
-        let product__card = document.createElement("div");
-
-        product__card.innerHTML = `
-                <div class="product__card"> 
-                <picture> <img class="product__card__img" src="${producto.img}"> </picture>
-                <p class="product__card__name">${producto.nombre}</p>
-                <div class="product__card__text">
-                    <p class="product__card__price">U$D${producto.precio}</p>
-                    <button class="product__card__buy">AGREGAR AL CARRITO</button>
-                </div>
-                </div>
-            `;
-            contenedor.appendChild(product__card);
-    }
-}
-
-imprimirElementosEnHTML(productos);
