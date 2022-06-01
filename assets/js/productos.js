@@ -6,6 +6,12 @@ const productos = [
         origen: "Sudafrica",
         precio: 10,
         img: "./images/jasperojo.jpeg",
+        clasificacion: "Tamboreada",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
     },
 
     {
@@ -14,6 +20,12 @@ const productos = [
         origen: "Brasil",
         precio: 7,
         img:"./images/cuarzoverde.jpeg",
+        clasificacion: "Tamboreada",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
     },
 
     {
@@ -22,6 +34,12 @@ const productos = [
         origen: "Brasil",
         precio: 13,
         img:"./images/jaspecebra.jpeg",
+        clasificacion: "Tamboreada",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
     },
 
     {
@@ -30,6 +48,12 @@ const productos = [
         origen: "Perú",
         precio: 15,
         img:"./images/crisocola.jpeg",
+        clasificacion: "Tamboreada",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
     },
 
     {
@@ -38,6 +62,12 @@ const productos = [
         origen: "Congo",
         precio: 17,
         img:"./images/malaquita.jpeg",
+        clasificacion: "Tamboreada",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
     },
 
     {
@@ -46,6 +76,12 @@ const productos = [
         origen: "Namibia",
         precio: 12,
         img:"./images/agatadeencajeazul.jpeg",
+        clasificacion: "Tamboreada",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
     },
 
     {
@@ -54,6 +90,12 @@ const productos = [
         origen: "Botswana",
         precio: 23,
         img:"./images/agataarborescente.jpeg",
+        clasificacion: "Tamboreada",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
     }/*,
 
     {
@@ -62,6 +104,9 @@ const productos = [
         origen: "",
         precio: 23,
         img:"./images/.jpeg",
+        clasificacion: "",
+        cantidad: 1,
+        peso:"",
     }*/
 ]
 /*
@@ -142,10 +187,5 @@ precioTotal = obtenerPrecioTotal();
 alert(`El precio final de tu compra es de $${precioTotal}
 Muchas gracias por tu compra!`);
 console.table(carrito);
-
-//filtrado
-
-let nuevoArray = productos.filter((elemento) => elemento.precio < 10);
-console.log("Array con precio menor a 10");
-console.table(nuevoArray); */
+*/
 

@@ -62,17 +62,27 @@ a {
   .product__card__img {
     max-height: 20em;
     max-width: auto;
-    margin: 0.5em; }
+    margin: 0.5em;
+    align-content: center; }
   .product__card__text {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 1em;
     margin: 0.5em; }
   .product__card__name {
     margin: 0.5em;
     text-align: center; }
+  .product__card__origen {
+    text-align: center; }
 
 #add__carrito {
   font-size: 2rem; }
+
+.product__unit {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em; }
