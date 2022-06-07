@@ -25,6 +25,9 @@
         text-align: center;
 
     }
+    &__buy {
+        border: solid 0.1em !important
+    }
 }
 
 #add__carrito {
@@ -34,5 +37,9 @@
 .product__unit {
         @include flex (row, flex-start, center, 1em);
     }
+
+#precio__total {
+    text-align: center;
+}
 
 

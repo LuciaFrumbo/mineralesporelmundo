@@ -59,9 +59,46 @@ let tamboreadas = productos.filter((elemento) => elemento.clasificacion=="Tambor
 console.log("Array con piedras tamboreadas");
 console.table(tamboreadas);
 
+imprimirElementosEnHTML(tamboreadas);
+
+function imprimirElementosEnHTML(tamboreadas) {
+let contenedor = document.getElementById("contenedor");
+for (const tamboreada of tamboreadas) {
+    let product__card = document.createElement("div");
+
+        product__card.innerHTML = `
+                <div class="product__card"> 
+                <p class="product__card__name">${tamboreada.nombre}</p>
+                <p class="product__card__origen">${tamboreada.origen}</p>
+                <picture> <img class="product__card__img" src="${tamboreada.img}"> </picture>
+                <div class="product__card__text">
+                <div class="product__unit">
+                <select name="Cant">
+                    <option id="btnunit${tamboreada.cantidad}">1</option>
+                    <option id="btnunit${tamboreada.cantidad}">2</option>
+                    <option id="btnunit${tamboreada.cantidad}">3</option>
+                    <option id="btnunit${tamboreada.cantidad}">4</option>
+                    <option id="btnunit${tamboreada.cantidad}">5</option>
+                </select>
+                <p>${tamboreada.peso.peso1}</p>
+                <p>$${tamboreada.precio}</p>
+                <button class="product__card__buy" id="btnadd${tamboreada.id}">AGREGAR</button>
+            </div>
+                </div>
+            `;
+            contenedor.appendChild(product__card);
+    }
+    tamboreadas.forEach(tamboreada => {
+        document.getElementById(`btnadd${tamboreada.id}`).addEventListener("click", function(){
+            agregarAlCarrito(tamboreada);
+        });
+    });
+
+}
+
 
 //IMPRIMIR ELEMENTOS EN HTML 
-
+/*
 imprimirElementosEnHTML(productos);
 
 function imprimirElementosEnHTML(productos) {
@@ -82,36 +119,54 @@ function imprimirElementosEnHTML(productos) {
                 </p>
                 <p>${producto.peso.peso1}</p>
                 <p>$${producto.precio}</p>
-                <button class="product__card__buy" id="btn${producto.id}">AGREGAR</button>
+                <button class="product__card__buy" id="btnadd${producto.id}">AGREGAR</button>
             </div>
                 </div>
             `;
             contenedor.appendChild(product__card);
     }
     productos.forEach(producto => {
-        document.getElementById(`btn${producto.id}`).addEventListener("click", function(){
+        document.getElementById(`btnadd${producto.id}`).addEventListener("click", function(){
             agregarAlCarrito(producto);
         });
     });
 }
-
+*/
+//AGREGAR AL CARRITO
 
 function agregarAlCarrito(productoNuevo) {
     carrito.push(productoNuevo);
     console.log(carrito);
-    document.getElementById("add__carrito").innerHTML=`Agregaste ${productoNuevo.nombre} al carrito!`
+    swal("Listo!", `Agregaste ${productoNuevo.nombre} al carrito!`, "success");
     document.getElementById("tablabody").innerHTML+=`
     <tr>
         <td>${productoNuevo.cantidad}</td>
         <td>${productoNuevo.nombre}</td>
         <td>${productoNuevo.precio}</td>
         <td>${productoNuevo.precio*productoNuevo.cantidad}</td>
-        <td><i class="fa-solid fa-trash-can"></i></td>
+        <td><button id="btnrem${productoNuevo.id}"><i class="fa-solid fa-trash-can"></i></button></td>
     </tr>`;
     localStorage.setItem("carrito",JSON.stringify(carrito));
+
+    //ELIMINAR DEL CARRITO no anda, arreglar!
+
+carrito.forEach(productoNuevo => {
+    document.getElementById(`btnrem${productoNuevo.id}`).addEventListener("click", function(){
+        eliminarDelCarrito(productoNuevo);
+    });
+});
+
+}
+function eliminarDelCarrito(productoNuevo){
+    carrito.splice(productoNuevo);
+    console.log(carrito);
+    
+    
 }
 
-// mostrar precio total
+
+// mostrar y actualizar precio total
+
 function obtenerPrecioTotal () {
     let precioTotal=0;
     for (const producto of carrito) {
@@ -120,6 +175,15 @@ function obtenerPrecioTotal () {
     return precioTotal;
 }
 precioTotal = obtenerPrecioTotal();
+
+document.getElementById("precio__total").innerHTML+=`
+
+        <div id="precio__total">
+            <p>PRECIO TOTAL: ${precioTotal}</p>
+            <button>FINALIZAR COMPRA</button>
+        </div>`
+
+
 
 
 //IMPRIMIR DESCRIPCION EN HTML APARTE

@@ -1,0 +1,18 @@
+footer {
+    margin-top: 15em;
+    background-color: $principal;
+    .contact__me {
+        @include flex (column, center, center, 1em);
+        &__city {
+            color: $secondary;
+        }
+        &__email {
+            color: $secondary;
+        }
+    }
+    .publi {
+        text-align: end;
+        color: $secondary;
+    }
+
+}
