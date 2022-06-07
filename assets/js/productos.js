@@ -5,7 +5,7 @@ const productos = [
         nombre: "Jaspe Rojo",
         origen: "Sudafrica",
         precio: 10,
-        img: "./images/tamboreadas/jasperojo.jpeg",
+        img: "./images/Tamboreadas/jasperojo.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -19,7 +19,7 @@ const productos = [
         nombre: "Cuarzo Verde",
         origen: "Brasil",
         precio: 7,
-        img:"./images/tamboreadas/cuarzoverde.jpeg",
+        img:"./images/Tamboreadas/cuarzoverde.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -33,7 +33,7 @@ const productos = [
         nombre: "Jaspe Cebra",
         origen: "Brasil",
         precio: 13,
-        img:"./images/tamboreadas/jaspecebra.jpeg",
+        img:"./images/Tamboreadas/jaspecebra.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -47,7 +47,7 @@ const productos = [
         nombre: "Crisocola",
         origen: "Perú",
         precio: 15,
-        img:"./images/tamboreadas/crisocola.jpeg",
+        img:"./images/Tamboreadas/crisocola.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -61,7 +61,7 @@ const productos = [
         nombre: "Malaquita",
         origen: "Congo",
         precio: 17,
-        img:"./images/tamboreadas/malaquita.jpeg",
+        img:"./images/Tamboreadas/malaquita.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -75,7 +75,7 @@ const productos = [
         nombre: "Agata de Encaje Azul",
         origen: "Namibia",
         precio: 12,
-        img:"./images/tamboreadas/agatadeencajeazul.jpeg",
+        img:"./images/Tamboreadas/agatadeencajeazul.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -89,7 +89,7 @@ const productos = [
         nombre: "Agata Arborescente",
         origen: "Botswana",
         precio: 23,
-        img:"./images/tamboreadas/agataarborescente.jpeg",
+        img:"./images/Tamboreadas/agataarborescente.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
