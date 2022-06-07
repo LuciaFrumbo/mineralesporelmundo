@@ -5,7 +5,7 @@ const productos = [
         nombre: "Jaspe Rojo",
         origen: "Sudafrica",
         precio: 10,
-        img: "./images/jasperojo.jpeg",
+        img: "./images/tamboreadas/jasperojo.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -19,7 +19,7 @@ const productos = [
         nombre: "Cuarzo Verde",
         origen: "Brasil",
         precio: 7,
-        img:"./images/cuarzoverde.jpeg",
+        img:"./images/tamboreadas/cuarzoverde.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -33,7 +33,7 @@ const productos = [
         nombre: "Jaspe Cebra",
         origen: "Brasil",
         precio: 13,
-        img:"./images/jaspecebra.jpeg",
+        img:"./images/tamboreadas/jaspecebra.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -47,7 +47,7 @@ const productos = [
         nombre: "Crisocola",
         origen: "Perú",
         precio: 15,
-        img:"./images/crisocola.jpeg",
+        img:"./images/tamboreadas/crisocola.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -61,7 +61,7 @@ const productos = [
         nombre: "Malaquita",
         origen: "Congo",
         precio: 17,
-        img:"./images/malaquita.jpeg",
+        img:"./images/tamboreadas/malaquita.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -75,7 +75,7 @@ const productos = [
         nombre: "Agata de Encaje Azul",
         origen: "Namibia",
         precio: 12,
-        img:"./images/agatadeencajeazul.jpeg",
+        img:"./images/tamboreadas/agatadeencajeazul.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -89,7 +89,7 @@ const productos = [
         nombre: "Agata Arborescente",
         origen: "Botswana",
         precio: 23,
-        img:"./images/agataarborescente.jpeg",
+        img:"./images/tamboreadas/agataarborescente.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{

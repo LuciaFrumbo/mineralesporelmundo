@@ -18,8 +18,8 @@
     <header>
         <div class="navbar__down">
             <a href="./tamboreadas.html#contact">CONTACTO</a>
-            <a href="">REGISTRARSE</a>
-            <a href="./carrito.html">CARRITO</a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+             <i class="fa-solid fa-cart-shopping"></i></button>
         </div>
         <nav>
             <picture class="header__logo"><a href="../index.html"><img src="./images/logo.jpg"></a> </picture>
@@ -32,6 +32,36 @@
         </nav>
     </header>
     <main>
+          
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">CARRITO</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                <div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Unidades</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio Unitario</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablabody">
+                           
+                        </tbody>
+                    </table>
+                    </div>
+                    <div id="precio__total">
+                    </div>
+            
+              </div>
+            </div>
+          </div>
 
         <div id="contenedor">
 
@@ -40,28 +70,6 @@
         <div>
             <p id="add__carrito"></p>
         </div>
-    
-        <div>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Unidades</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Precio Unitario</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody id="tablabody">
-               
-            </tbody>
-        </table>
-        </div>
-
-
-        <div id="precio__total">
-        </div> 
-
 
     </main>
     <footer>
