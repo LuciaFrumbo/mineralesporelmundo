@@ -5,7 +5,7 @@ const productos = [
         nombre: "Jaspe Rojo",
         origen: "Sudafrica",
         precio: 10,
-        img: "./images/Tamboreadas/jasperojo.jpeg",
+        img: "./assets/images/Tamboreadas/jasperojo.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -19,7 +19,7 @@ const productos = [
         nombre: "Cuarzo Verde",
         origen: "Brasil",
         precio: 7,
-        img:"./images/Tamboreadas/cuarzoverde.jpeg",
+        img:"./assets/images/Tamboreadas/cuarzoverde.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -33,7 +33,7 @@ const productos = [
         nombre: "Jaspe Cebra",
         origen: "Brasil",
         precio: 13,
-        img:"./images/Tamboreadas/jaspecebra.jpeg",
+        img:"./assets/images/Tamboreadas/jaspecebra.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -47,7 +47,7 @@ const productos = [
         nombre: "Crisocola",
         origen: "Perú",
         precio: 15,
-        img:"./images/Tamboreadas/crisocola.jpeg",
+        img:"./assets/images/Tamboreadas/crisocola.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -61,7 +61,7 @@ const productos = [
         nombre: "Malaquita",
         origen: "Congo",
         precio: 17,
-        img:"./images/Tamboreadas/malaquita.jpeg",
+        img:"./assets/images/Tamboreadas/malaquita.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -75,7 +75,7 @@ const productos = [
         nombre: "Agata de Encaje Azul",
         origen: "Namibia",
         precio: 12,
-        img:"./images/Tamboreadas/agatadeencajeazul.jpeg",
+        img:"./assets/images/Tamboreadas/agatadeencajeazul.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
@@ -89,25 +89,140 @@ const productos = [
         nombre: "Agata Arborescente",
         origen: "Botswana",
         precio: 23,
-        img:"./images/Tamboreadas/agataarborescente.jpeg",
+        img:"./assets/images/Tamboreadas/agataarborescente.jpeg",
         clasificacion: "Tamboreada",
         cantidad: 1,
         peso:{
             peso1:"20-30g",
             peso2:"35-50g",
         }
-    }/*,
+    },
 
     {
-        id: ,
-        nombre: "",
-        origen: "",
+        id: 7,
+        nombre: "Amatista",
+        origen: "Brasil",
         precio: 23,
-        img:"./images/.jpeg",
-        clasificacion: "",
+        img:"./assets/images/Trabajado/Esferas/AmatistaBrasil.jpeg",
+        clasificacion: "Esfera",
         cantidad: 1,
-        peso:"",
-    }*/
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
+    },
+
+    {
+        id: 8,
+        nombre: "Crisocola",
+        origen: "Peru",
+        precio: 23,
+        img:"./assets/images/Trabajado/Esferas/CrisocolaPeru.jpeg",
+        clasificacion: "Esfera",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
+    },
+
+    {
+        id: 9,
+        nombre: "Cuarzo Cristal",
+        origen: "Brasil",
+        precio: 23,
+        img:"./assets/images/Trabajado/Esferas/CuarzoCristalBrasil.jpeg",
+        clasificacion: "Esfera",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
+    },
+
+    {
+        id: 10,
+        nombre: "Cuarzo Rosa",
+        origen: "Brasil",
+        precio: 23,
+        img:"./assets/images/Trabajado/Esferas/CuarzoRosaBrasil.jpeg",
+        clasificacion: "Esfera",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
+    },
+
+    {
+        id: 11,
+        nombre: "Lapislázuli",
+        origen: "Afganistán",
+        precio: 23,
+        img:"./assets/images/Trabajado/Esferas/LapislázuliAfganistan.jpeg",
+        clasificacion: "Esfera",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
+    },
+
+    {
+        id: 12,
+        nombre: "Amatista",
+        origen: "Brasil",
+        precio: 23,
+        img:"./assets/images/Trabajado/Pendulos/Amatista.jpeg",
+        clasificacion: "Pendulo",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
+    },
+
+    {
+        id: 13,
+        nombre: "Cuarzo Cristal",
+        origen: "Brasil",
+        precio: 23,
+        img:"./assets/images/Trabajado/Pendulos/CuarzoCristal.jpeg",
+        clasificacion: "Pendulo",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
+    },
+
+    {
+        id: 14,
+        nombre: "Cuarzo Verde",
+        origen: "Brasil",
+        precio: 23,
+        img:"./assets/images/Trabajado/Pendulos/CuarzoVerde.jpeg",
+        clasificacion: "Pendulo",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
+    },
+
+    {
+        id: 15,
+        nombre: "Ojo de Tigre",
+        origen: "Sudafrica",
+        precio: 23,
+        img:"./assets/images/Trabajado/Pendulos/OjoDeTigreSudafrica.jpeg",
+        clasificacion: "Pendulo",
+        cantidad: 1,
+        peso:{
+            peso1:"20-30g",
+            peso2:"35-50g",
+        }
+    },
 ]
 /*
 let carrito = [];

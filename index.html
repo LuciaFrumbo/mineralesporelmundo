@@ -18,15 +18,16 @@
         <header>
             <div class="navbar__down">
                 <a href="index.html#contact">CONTACTO</a>
-                <a href="./assets/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="fa-solid fa-cart-shopping"></i><p id="cantidades"> </p></button>
             </div>
             <nav>
                 <picture class="header__logo"><a href="index.html"><img src="assets/images/logo.jpg"></a> </picture>
                 <ul class="navbar">
-                    <li class="navbar__item"><a href="./assets/trabajado.html">TRABAJADO</a></li>
-                    <li class="navbar__item"><a href="./assets/bruto.html">BRUTO</a></li>
-                    <li class="navbar__item"><a href="./assets/tamboreadas.html">TAMBOREADAS</a></li>
-                    <li class="navbar__item"><a href="./assets/luminarias.html">LUMINARIAS</a>></li>
+                    <li class="navbar__item"><a href="">TRABAJADO</a></li>
+                    <li class="navbar__item"><a href="">BRUTO</a></li>
+                    <li class="navbar__item"><a href="">TAMBOREADAS</a></li>
+                    <li class="navbar__item"><a href="">LUMINARIAS</a>></li>
                 </ul>
             </nav>
 
@@ -34,48 +35,119 @@
         <main>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./assets/images/carrousel4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item active">
+                        <img src="./assets/images/carrousel41.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/carrousel1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/carrousel2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+          
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">CARRITO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
-                  <div class="carousel-item">
-                    <img src="./assets/images/carrousel1.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./assets/images/carrousel3.jpg" class="d-block w-100" alt="...">
+                  <div class="offcanvas-body">
+                    <div>
+                      <div>
+                          <table class="table table-striped">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">Unidades</th>
+                                      <th scope="col">Nombre</th>
+                                      <th scope="col">Precio Unitario</th>
+                                      <th scope="col">Precio</th>
+                                      <th scope="col"></th>
+                                  </tr>
+                              </thead>
+                              <tbody id="tablabody">
+                                 
+                              </tbody>
+                          </table>
+                          </div>
+                          <div id="precio__total">
+                          </div>
+                  
+                    </div>
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                <div id="valor__dolar"></div>
+      
+              <div id="contenedor">
+      
               </div>
+      
+              <div>
+                  <p id="add__carrito"></p>
+              </div>
+      
+
+            <div class="info">
+            <div class="info__left">
+                <picture>
+                    <img src="./assets/images/envios.png">
+                </picture>
+                <div>
+                    <p class="info__text">ENVIOS A TODO EL PAIS</p>
+                </div>
+            </div>
+
+            <div class="info__right">
+                <picture>
+                    <img src="./assets/images/pagos-removebg-preview.png">
+                </picture>
+                <div>
+                    <p class="info__text">MERCADO PAGO-TRANSFERENCIA</p>
+                </div>
+            </div>
+            </div>
 
         </main>
 
         <footer>
-            <div id="contact"> 
+            <div id="contact">
                 <div class="contact__me">
-                    <a href="http://wa.me/5495555555"><i class="fa-brands fa-whatsapp">  +5491158965498</i></a>
+                    <a href="http://wa.me/5495555555"><i class="fa-brands fa-whatsapp"> +5491158965498</i></a>
                     <p class="contact__me__city"> CABA, Argentina.</p>
                     <p class="contact__me__email">mineralesporelmundo@gmail.com</p>
-                    <a href="http://www.instagram.com/mineralesporelmundo"><i class="fa-brands fa-instagram"> mineralesporelmundo</i></a>
+                    <a href="http://www.instagram.com/mineralesporelmundo"><i class="fa-brands fa-instagram">
+                            mineralesporelmundo</i></a>
                 </div>
                 <div>
                     <p class="publi">Developed by Quifdevs®</p>
                 </div>
             </div>
-    
+
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <script src="./assets/js/productos.js"></script>
+        <script src="./assets/js/carrito.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
         <script src="https://kit.fontawesome.com/f1e7f7f9b7.js" crossorigin="anonymous"></script>
     </body>
 

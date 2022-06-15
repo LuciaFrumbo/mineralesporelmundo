@@ -48,8 +48,21 @@ a {
   gap: 1em;
   margin-right: 3em; }
 
+#cantidades {
+  color: #fff; }
+
+.btn-primary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  --bs-btn-bg: $principal;
+  --bs-btn-border-color: $principal;
+  --bs-btn-hover-bg: $principal;
+  --bs-btn-hover-border-color: $principal; }
+
 footer {
-  margin-top: 15em;
   background-color: #000; }
   footer .contact__me {
     display: flex;
@@ -108,3 +121,34 @@ footer {
 
 #precio__total {
   text-align: center; }
+
+#valor__dolar {
+  text-align: center;
+  font-size: 2rem;
+  background-color: #000;
+  color: #fff; }
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10em;
+  margin-top: 2.5em; }
+  .info__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    font-size: 1rem;
+    size: 50%; }
+  .info__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    font-size: 1rem;
+    margin-left: 3em;
+    size: 50%; }

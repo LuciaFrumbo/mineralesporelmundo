@@ -1,8 +1,5 @@
 header {
     background-color: $principal;
-    //position: fixed;
-    //width: 100%;
-    //height: auto;
 }
 
 nav {
@@ -30,4 +27,16 @@ a {
 .navbar__down {
     @include flex (row, flex-end, center, 1em);
     margin-right: 3em;
+}
+
+#cantidades {
+    color: $secondary;
+}
+
+.btn-primary {
+    @include flex (row, center, center, 1em);
+     --bs-btn-bg: $principal; 
+     --bs-btn-border-color: $principal;
+     --bs-btn-hover-bg: $principal;
+     --bs-btn-hover-border-color: $principal;
 }

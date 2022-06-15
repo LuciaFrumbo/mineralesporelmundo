@@ -1,0 +1,68 @@
+#contenedor {
+    @include flex (row, flex-start, center, 1em);
+    flex-wrap: wrap;
+}
+
+.product__card {
+    border: solid 0.1em $principal;
+    margin: 2em;
+
+    &__img {
+        max-height: 20em;
+        max-width: auto;
+        margin:0.5em;
+        align-content:center;
+    }
+    &__text {
+        @include flex (row, center, center, 1em);
+        margin:0.5em;
+    }
+    &__name {
+        margin:0.5em;
+        text-align: center;
+    }
+    &__origen {
+        text-align: center;
+
+    }
+    &__buy {
+        border: solid 0.1em !important
+    }
+}
+
+#add__carrito {
+    font-size: 2rem;
+}
+
+.product__unit {
+        @include flex (row, flex-start, center, 1em);
+    }
+
+#precio__total {
+    text-align: center;
+}
+
+#valor__dolar {
+    text-align: center;
+    font-size: 2rem;
+    background-color: $principal;
+    color: $secondary;
+}
+
+
+.info{
+    @include flex (row, center, center, 10em);
+    margin-top:2.5em;
+    &__left {
+        @include flex (column, flex-start, center, 1em);
+        font-size: 1rem;
+        size:50%;
+    }
+
+    &__right {
+        @include flex (column, flex-end, center, 1em);
+        font-size: 1rem;
+        margin-left: 3em;
+        size:50%;
+        }
+}

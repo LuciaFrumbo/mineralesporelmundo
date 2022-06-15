@@ -1,5 +1,4 @@
 footer {
-    margin-top: 15em;
     background-color: $principal;
     .contact__me {
         @include flex (column, center, center, 1em);
