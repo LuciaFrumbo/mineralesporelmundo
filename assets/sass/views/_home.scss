@@ -49,6 +49,10 @@
     color: $secondary;
 }
 
+.boton__finalizar {
+    text-align: center;
+}
+
 
 .info{
     @include flex (row, center, center, 10em);
