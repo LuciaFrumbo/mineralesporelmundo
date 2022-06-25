@@ -24,7 +24,8 @@ nav {
   gap: 1em; }
 
 .header__logo {
-  display: flex; }
+  display: flex;
+  margin-bottom: 5em; }
 
 a {
   text-decoration: none;

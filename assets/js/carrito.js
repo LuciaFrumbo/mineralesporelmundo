@@ -2,24 +2,16 @@
 let carrito;
 if (localStorage.getItem("carrito") != null) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
-    //for of y funcion para recorrer el storage
     renderizarCarrito();
     carrito.forEach(producto => {
         document.getElementById(`btnrem${producto.id}`).addEventListener("click", function () {
             eliminarDelCarrito(producto.id);
         });
     });
-    console.log(carrito);
+    console.table(carrito);
 } else {
     carrito = [];
 }
-
-//FILTRAR PRODUCTOS POR PROPIEDAD
-//HACER UNO POR CADA PROPIEDAD Y MOSTRAR EN PAGINA ESPECIFICA
-
-let tamboreadas = productos.filter((elemento) => elemento.clasificacion == "Tamboreada");
-console.log("Array con piedras tamboreadas");
-console.table(tamboreadas);
 
 //IMPRIMIR ELEMENTOS EN HTML 
 
@@ -53,14 +45,16 @@ function imprimirElementosEnHTML(productos) {
     });
 }
 
-//AGREGAR AL CARRITO
+//AGREGAR AL CARRITO Y AGREGAR UNIDADES SI EL PRODUCTO YA ESTA
 
 function agregarAlCarrito(productoNuevo) {
-    let index = carrito.indexOf(productoNuevo)
+    let productoEncontrado = carrito.find(p => p.id == productoNuevo.id)
+    let index = carrito.indexOf(productoEncontrado)
     if (index !== -1) {
         carrito[index].cantidad += 1
         renderizarCarrito()
-        console.log(carrito);
+        console.table(carrito);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
         document.querySelector("#precio__total__texto").innerText=(`
         PRECIO TOTAL: ${obtenerPrecioTotal()} USD`);
         swal("Listo!", `Agregaste otra unidad de ${productoNuevo.nombre} al carrito!`, "success");
@@ -72,10 +66,9 @@ function agregarAlCarrito(productoNuevo) {
     } else {
         carrito.push(productoNuevo);
         swal("Listo!", `Agregaste ${productoNuevo.nombre} al carrito!`, "success");
-
         localStorage.setItem("carrito", JSON.stringify(carrito));
         renderizarCarrito()
-        console.log(carrito);
+        console.table(carrito);
         document.querySelector("#precio__total__texto").innerText=(`
         PRECIO TOTAL: ${obtenerPrecioTotal()} USD`);
 
@@ -103,6 +96,11 @@ function eliminarDelCarrito(id) {
             carrito = newCarrito
             localStorage.setItem("carrito", JSON.stringify(carrito));
             renderizarCarrito();
+            carrito.forEach(producto => {
+                document.getElementById(`btnrem${producto.id}`).addEventListener("click", function () {
+                    eliminarDelCarrito(producto.id);
+                });
+            });
           swal("Listo! ha sido eliminado!", {
             icon: "success",
           });
@@ -115,6 +113,11 @@ function eliminarDelCarrito(id) {
     renderizarCarrito();
     document.querySelector("#precio__total__texto").innerText=(`
     PRECIO TOTAL: ${obtenerPrecioTotal()} USD`);
+    carrito.forEach(producto => {
+        document.getElementById(`btnrem${producto.id}`).addEventListener("click", function () {
+            eliminarDelCarrito(producto.id);
+        });
+    });
 }
 
 function renderizarCarrito() {
@@ -141,30 +144,6 @@ function obtenerPrecioTotal() {
     return precioTotal;
 }
 
-/*Ordenar mayor/menor/alfabeticamente
-        function ordenar() {
-            let seleccion = document.querySelector("#miSeleccion").value;
-            console.log(seleccion)
-            if (seleccion == "menor") {
-                productos.sort(function(a, b) {
-                    return a.precio - b.precio
-                });
-            } else if (seleccion == "mayor") {
-                productos.sort(function(a, b) {
-                    return b.precio - a.precio
-                });
-            } else if (seleccion == "alfabetico") {
-                productos.sort(function(a, b) {
-                    return a.nombre.localeCompare(b.nombre);
-                });
-            }
-            document.querySelector(".product__card").innerHTML="";
-            imprimirElementosEnHTML();
-        }
-
-        document.querySelector("#miSeleccion option[value='pordefecto']").setAttribute("selected", true);
-        document.querySelector("#miSeleccion").onchange=()=>ordenar();
-*/
 //funcion para mostrar valor dolar del dia
 let dolarVenta;
 
@@ -194,7 +173,7 @@ document.getElementById("finalizar__compra").addEventListener("click", function 
     }
     
 });
-
+//vaciar el carrito al finalizar la compra y mostrar alert
 function finalizarCompra() {
     carrito=[];
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -203,7 +182,7 @@ function finalizarCompra() {
     PRECIO TOTAL: ${obtenerPrecioTotal()} USD`);
     swal ( " Finalizaste tu pedido " , " En instantes nos pondremos en contacto", "success" )   ;
 };
-
+//dar aviso que el carrito esta vacio por lo que no se puede finalizar la compra
 function noFinalizarCompra() {
     swal ( " El carrito está vacío " , " Agrega productos para comprar", "error" )   ;
 };
